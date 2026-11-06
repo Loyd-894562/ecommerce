@@ -1,0 +1,2 @@
+<div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control" id="name" name="name" value="{{ old('name', $category?->name) }}" required></div>
+<div><label class="form-label" for="description">Description <span class="text-secondary">(optional)</span></label><textarea class="form-control" id="description" name="description" rows="3">{{ old('description', $category?->description) }}</textarea></div>

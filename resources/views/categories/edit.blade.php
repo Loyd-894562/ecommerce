@@ -1,0 +1,7 @@
+@extends('layouts.app')
+
+@section('title', 'Edit category')
+
+@section('content')
+<div class="row justify-content-center"><div class="col-lg-7"><p><a class="text-decoration-none" href="{{ route('manage.categories.index') }}">← Categories</a></p><div class="card"><div class="card-body p-4"><h1 class="h3 mb-4">Edit {{ $category->name }}</h1><form method="POST" action="{{ route('manage.categories.update', $category) }}">@csrf @method('PUT') @include('categories._form')<button class="btn btn-primary mt-3" type="submit">Save changes</button></form></div></div></div></div>
+@endsection
